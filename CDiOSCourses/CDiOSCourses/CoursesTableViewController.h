@@ -11,7 +11,7 @@
 
 #import "AddCourseViewController.h"
 
-@interface CoursesTableViewController : UITableViewController <AddCourseViewControllerDelegate>
+@interface CoursesTableViewController : UITableViewController <AddCourseViewControllerDelegate, NSFetchedResultsControllerDelegate>
 
 @property (nonatomic) NSManagedObjectContext *managedObjectContext;
 
