@@ -17,6 +17,18 @@
 
 @synthesize fetchedResultsController = _fetchedResultsController;
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"addCourse"]) {
+        AddCourseViewController *acvc = (AddCourseViewController *)[segue destinationViewController];
+        acvc.delegate = self;
+        
+        Course *newCourse = (Course *)[NSEntityDescription insertNewObjectForEntityForName:@"Course" inManagedObjectContext:self.managedObjectContext];
+        acvc.currentCourse = newCourse;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -108,10 +120,7 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
+
 */
 
 #pragma mark -- Fetched Results Controller Section
@@ -131,6 +140,23 @@
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"author" cacheName:nil];
     
     return _fetchedResultsController;
+}
+
+- (void) addCourseViewControllerDidCancel:(Course *)courseToDelete {
+    NSManagedObjectContext *context = self.managedObjectContext;
+    [context deleteObject:courseToDelete];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) addCourseViewControllerDidSave {
+    NSError *error = nil;
+    NSManagedObjectContext *context = self.managedObjectContext;
+    if (![context save:&error]) {
+        NSLog(@"Error! %@", error);
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 @end
