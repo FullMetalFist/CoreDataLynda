@@ -175,17 +175,47 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d58-aJ-iZY">
+                                <rect key="frame" x="167" y="77" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="aQl-bV-hzc"/>
+                                </constraints>
+                                <state key="normal" title="Edit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="edit:" destination="Hmp-SN-otH" eventType="touchUpInside" id="2bP-2Q-SDS"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unY-dL-rRj">
+                                <rect key="frame" x="388" y="77" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="D9D-Hp-IhQ"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="Hmp-SN-otH" eventType="touchUpInside" id="eRB-3u-Q3e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="R30-4Y-yGi" firstAttribute="top" secondItem="lnJ-yR-VxU" secondAttribute="bottom" constant="20" id="1Cx-jO-Cd3"/>
                             <constraint firstItem="6Np-8C-t4x" firstAttribute="leading" secondItem="fWT-MZ-und" secondAttribute="leadingMargin" id="8gz-Q4-dWF"/>
+                            <constraint firstAttribute="trailing" secondItem="unY-dL-rRj" secondAttribute="trailing" constant="166" id="B03-0f-sJv"/>
+                            <constraint firstItem="lnJ-yR-VxU" firstAttribute="top" secondItem="unY-dL-rRj" secondAttribute="bottom" constant="31" id="HJz-AM-Cb9"/>
                             <constraint firstItem="lnJ-yR-VxU" firstAttribute="leading" secondItem="fWT-MZ-und" secondAttribute="leadingMargin" id="J3k-aE-nqw"/>
                             <constraint firstItem="6Np-8C-t4x" firstAttribute="top" secondItem="R30-4Y-yGi" secondAttribute="bottom" constant="22" id="JfI-um-45y"/>
+                            <constraint firstItem="unY-dL-rRj" firstAttribute="top" secondItem="vYd-B6-hDG" secondAttribute="bottom" constant="13" id="OMO-PH-zpR"/>
                             <constraint firstItem="6Np-8C-t4x" firstAttribute="top" secondItem="R30-4Y-yGi" secondAttribute="bottom" constant="22" id="QdI-LW-Odt"/>
+                            <constraint firstItem="d58-aJ-iZY" firstAttribute="top" secondItem="vYd-B6-hDG" secondAttribute="bottom" constant="13" id="Qpn-Mg-GKX"/>
+                            <constraint firstItem="d58-aJ-iZY" firstAttribute="leading" secondItem="fWT-MZ-und" secondAttribute="leading" constant="167" id="SLW-MQ-dKM"/>
                             <constraint firstItem="R30-4Y-yGi" firstAttribute="top" secondItem="lnJ-yR-VxU" secondAttribute="bottom" constant="20" id="T1I-1A-UiM"/>
                             <constraint firstItem="R30-4Y-yGi" firstAttribute="leading" secondItem="fWT-MZ-und" secondAttribute="leadingMargin" id="XtH-Bg-nlb"/>
                             <constraint firstItem="lnJ-yR-VxU" firstAttribute="trailing" secondItem="fWT-MZ-und" secondAttribute="trailingMargin" id="YSi-mV-oVv"/>
+                            <constraint firstItem="lnJ-yR-VxU" firstAttribute="top" secondItem="d58-aJ-iZY" secondAttribute="bottom" constant="31" id="YvF-05-3xg"/>
                             <constraint firstItem="aFT-f1-XnR" firstAttribute="top" secondItem="6Np-8C-t4x" secondAttribute="bottom" constant="330" id="cdX-Xd-tgT"/>
                             <constraint firstItem="R30-4Y-yGi" firstAttribute="trailing" secondItem="fWT-MZ-und" secondAttribute="trailingMargin" id="iFo-6r-lx8"/>
                             <constraint firstItem="lnJ-yR-VxU" firstAttribute="top" secondItem="vYd-B6-hDG" secondAttribute="bottom" constant="74" id="mTe-Gl-Foh"/>
@@ -195,6 +225,8 @@
                     <connections>
                         <outlet property="authorField" destination="R30-4Y-yGi" id="KjK-40-Qe6"/>
                         <outlet property="dateField" destination="6Np-8C-t4x" id="sCz-ne-74P"/>
+                        <outlet property="doneButton" destination="unY-dL-rRj" id="hsT-QG-W24"/>
+                        <outlet property="editButton" destination="d58-aJ-iZY" id="ku0-gc-HSu"/>
                         <outlet property="titleField" destination="lnJ-yR-VxU" id="rTy-qB-ZhK"/>
                     </connections>
                 </viewController>

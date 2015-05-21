@@ -15,4 +15,9 @@
 @dynamic releaseDate;
 @dynamic author;
 
+- (void) awakeFromInsert {
+    [super awakeFromInsert];
+    self.releaseDate = [NSDate date];       // customize default value to today's date
+}
+
 @end
