@@ -17,6 +17,7 @@
 		7C51C2EE1B0E204900764080 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C51C2ED1B0E204900764080 /* Course.m */; };
 		7C51C2F11B0E20E200764080 /* CoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C51C2F01B0E20E200764080 /* CoursesTableViewController.m */; };
 		7C51C2F41B0E2A8500764080 /* AddCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C51C2F31B0E2A8500764080 /* AddCourseViewController.m */; };
+		7C51C2F71B0E41BD00764080 /* DisplayEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C51C2F61B0E41BD00764080 /* DisplayEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		7C51C2F01B0E20E200764080 /* CoursesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursesTableViewController.m; sourceTree = "<group>"; };
 		7C51C2F21B0E2A8500764080 /* AddCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCourseViewController.h; sourceTree = "<group>"; };
 		7C51C2F31B0E2A8500764080 /* AddCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCourseViewController.m; sourceTree = "<group>"; };
+		7C51C2F51B0E41BD00764080 /* DisplayEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayEditViewController.h; sourceTree = "<group>"; };
+		7C51C2F61B0E41BD00764080 /* DisplayEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				7C51C2F31B0E2A8500764080 /* AddCourseViewController.m */,
 				7C51C2EF1B0E20E200764080 /* CoursesTableViewController.h */,
 				7C51C2F01B0E20E200764080 /* CoursesTableViewController.m */,
+				7C51C2F51B0E41BD00764080 /* DisplayEditViewController.h */,
+				7C51C2F61B0E41BD00764080 /* DisplayEditViewController.m */,
 				7C51C2D31B0E1F8000764080 /* Images.xcassets */,
 				7C51C2D51B0E1F8000764080 /* LaunchScreen.xib */,
 				7C51C2CA1B0E1F8000764080 /* CDiOSCourses.xcdatamodeld */,
@@ -235,6 +240,7 @@
 				7C51C2CC1B0E1F8000764080 /* CDiOSCourses.xcdatamodeld in Sources */,
 				7C51C2F11B0E20E200764080 /* CoursesTableViewController.m in Sources */,
 				7C51C2C91B0E1F8000764080 /* AppDelegate.m in Sources */,
+				7C51C2F71B0E41BD00764080 /* DisplayEditViewController.m in Sources */,
 				7C51C2F41B0E2A8500764080 /* AddCourseViewController.m in Sources */,
 				7C51C2C61B0E1F8000764080 /* main.m in Sources */,
 				7C51C2EE1B0E204900764080 /* Course.m in Sources */,

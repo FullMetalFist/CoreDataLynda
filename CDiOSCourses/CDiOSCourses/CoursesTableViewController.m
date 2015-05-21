@@ -8,6 +8,7 @@
 
 #import "CoursesTableViewController.h"
 #import "Course.h"
+#import "DisplayEditViewController.h"
 
 @interface CoursesTableViewController ()
 
@@ -26,6 +27,13 @@
         
         Course *newCourse = (Course *)[NSEntityDescription insertNewObjectForEntityForName:@"Course" inManagedObjectContext:self.managedObjectContext];
         acvc.currentCourse = newCourse;
+    }
+    
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        DisplayEditViewController *displayEditVC = (DisplayEditViewController *)[segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Course *selectedCourse = (Course *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+        displayEditVC.currentCourse = selectedCourse;
     }
 }
 
@@ -90,17 +98,22 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        NSManagedObjectContext *context = self.managedObjectContext;
+        Course *courseToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [context deleteObject:courseToDelete];
+        
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Error! %@", error);
+        }
+    }
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.

@@ -19,6 +19,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RM6-Cw-gmt" id="YT4-N6-Ooe">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Hmp-SN-otH" kind="show" identifier="showDetail" id="8T6-YH-VUF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -143,7 +146,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPZ-Yx-dfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968" y="366"/>
+            <point key="canvasLocation" x="2132" y="-80"/>
+        </scene>
+        <!--Display Edit View Controller-->
+        <scene sceneID="lu8-Yh-MmP">
+            <objects>
+                <viewController id="Hmp-SN-otH" customClass="DisplayEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vYd-B6-hDG"/>
+                        <viewControllerLayoutGuide type="bottom" id="aFT-f1-XnR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fWT-MZ-und">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lnJ-yR-VxU">
+                                <rect key="frame" x="16" y="138" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R30-4Y-yGi">
+                                <rect key="frame" x="16" y="188" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Np-8C-t4x">
+                                <rect key="frame" x="16" y="240" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R30-4Y-yGi" firstAttribute="top" secondItem="lnJ-yR-VxU" secondAttribute="bottom" constant="20" id="1Cx-jO-Cd3"/>
+                            <constraint firstItem="6Np-8C-t4x" firstAttribute="leading" secondItem="fWT-MZ-und" secondAttribute="leadingMargin" id="8gz-Q4-dWF"/>
+                            <constraint firstItem="lnJ-yR-VxU" firstAttribute="leading" secondItem="fWT-MZ-und" secondAttribute="leadingMargin" id="J3k-aE-nqw"/>
+                            <constraint firstItem="6Np-8C-t4x" firstAttribute="top" secondItem="R30-4Y-yGi" secondAttribute="bottom" constant="22" id="JfI-um-45y"/>
+                            <constraint firstItem="6Np-8C-t4x" firstAttribute="top" secondItem="R30-4Y-yGi" secondAttribute="bottom" constant="22" id="QdI-LW-Odt"/>
+                            <constraint firstItem="R30-4Y-yGi" firstAttribute="top" secondItem="lnJ-yR-VxU" secondAttribute="bottom" constant="20" id="T1I-1A-UiM"/>
+                            <constraint firstItem="R30-4Y-yGi" firstAttribute="leading" secondItem="fWT-MZ-und" secondAttribute="leadingMargin" id="XtH-Bg-nlb"/>
+                            <constraint firstItem="lnJ-yR-VxU" firstAttribute="trailing" secondItem="fWT-MZ-und" secondAttribute="trailingMargin" id="YSi-mV-oVv"/>
+                            <constraint firstItem="aFT-f1-XnR" firstAttribute="top" secondItem="6Np-8C-t4x" secondAttribute="bottom" constant="330" id="cdX-Xd-tgT"/>
+                            <constraint firstItem="R30-4Y-yGi" firstAttribute="trailing" secondItem="fWT-MZ-und" secondAttribute="trailingMargin" id="iFo-6r-lx8"/>
+                            <constraint firstItem="lnJ-yR-VxU" firstAttribute="top" secondItem="vYd-B6-hDG" secondAttribute="bottom" constant="74" id="mTe-Gl-Foh"/>
+                            <constraint firstItem="6Np-8C-t4x" firstAttribute="trailing" secondItem="fWT-MZ-und" secondAttribute="trailingMargin" id="pBR-0V-kPU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorField" destination="R30-4Y-yGi" id="KjK-40-Qe6"/>
+                        <outlet property="dateField" destination="6Np-8C-t4x" id="sCz-ne-74P"/>
+                        <outlet property="titleField" destination="lnJ-yR-VxU" id="rTy-qB-ZhK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a6h-Ig-Nmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2132" y="590"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zDP-v1-6sz">
